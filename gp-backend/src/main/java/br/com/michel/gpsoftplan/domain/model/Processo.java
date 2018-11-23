@@ -1,17 +1,17 @@
-package br.com.michel.gpsoftplan.model;
+package br.com.michel.gpsoftplan.domain.model;
 
-import lombok.Data;
+import lombok.*;
 
 import javax.persistence.*;
 import java.util.List;
 
-@Data
-@Entity(name = "PROCESSO")
-public class Processo {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
+@Entity(name = "PROCESSO")
+public class Processo  extends PersistentObject {
 
     private String descricao;
 

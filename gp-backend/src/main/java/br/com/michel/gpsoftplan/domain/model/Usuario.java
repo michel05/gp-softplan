@@ -1,12 +1,17 @@
-package br.com.michel.gpsoftplan.model;
+package br.com.michel.gpsoftplan.domain.model;
 
-import lombok.Data;
+import lombok.*;
 
 import javax.persistence.Entity;
 import javax.persistence.OneToMany;
 import java.util.List;
 
-@Data
+
+@Getter
+@Setter
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
 @Entity(name = "USUARIO")
 public class Usuario extends Pessoa {
 
