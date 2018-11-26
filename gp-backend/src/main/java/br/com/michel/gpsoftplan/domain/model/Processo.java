@@ -15,8 +15,8 @@ public class Processo  extends PersistentObject {
 
     private String descricao;
 
-    @OneToMany
-    private List<Usuario> usuarioPermitidos;
+    @OneToMany(orphanRemoval = true)
+    private List<Usuario> usuarios;
 
     @OneToOne(mappedBy = "processo", cascade = CascadeType.ALL,
             fetch = FetchType.LAZY, optional = false)

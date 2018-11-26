@@ -13,4 +13,8 @@ import javax.persistence.*;
 public abstract class Pessoa extends PersistentObject {
 
     private String nome;
+
+    public Pessoa(Long id) {
+        setId(id);
+    }
 }

@@ -9,15 +9,12 @@ import java.util.List;
 
 @Data
 @EqualsAndHashCode(callSuper = true)
-@Relation(value = "usuario", collectionRelation = "usuarios")
-public class UsuarioDto extends ResourceSupport {
+@Relation(value = "processo", collectionRelation = "processos")
+public class ProcessoDto extends ResourceSupport {
 
     private Long cod;
-    private String nome;
-    private String usuario;
-    private String email;
-    private String senha;
-    private List<UsuarioPerfilDto> perfis;
-    private String accessToken;
+    private String descricao;
+    private List<UsuarioDto> finalizadores;
+    private ParecerDto parecer;
 
 }
