@@ -1,0 +1,21 @@
+<!-- ============================================================== -->
+<!-- Right side toggle and nav items -->
+<!-- ============================================================== -->
+<ul   class="navbar-nav float-right">
+  <!-- ============================================================== -->
+  <!-- User profile and search -->
+  <!-- ============================================================== -->
+  <li class="nav-item dropdown">
+    <span class="text-muted" *ngIf="isLoggedIn()">
+          Olá, {{user()?.nome}} |
+          <a (click)="logout()"  class="nav-link dropdown-toggle text-muted waves-effect waves-dark pro-pic"
+           data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Logout</a>
+    </span>
+
+
+  </li>
+  <!-- ============================================================== -->
+  <!-- User profile and search -->
+  <!-- ============================================================== -->
+</ul>

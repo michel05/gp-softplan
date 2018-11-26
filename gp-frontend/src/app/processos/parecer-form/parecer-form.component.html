@@ -1,0 +1,27 @@
+<div class="row">
+  <div class="col-lg-12 col-xlg-12 col-md-12">
+    <div class="card">
+      <div class="card-body">
+        <form class="form-horizontal form-material" [formGroup]="parecerForm">
+          <div class="form-group" >
+            <label class="col-md-12">Descrição do processo</label>
+            <div class="col-md-3">
+              <label>{{processo?.descricao}}</label>
+            </div>
+          </div>
+          <div class="form-group">
+              <label class="col-md-12">Parecer</label>
+              <div class="col-md-3">
+                <textarea type="text" formControlName="descricaoParecer"  class="form-control form-control-line"></textarea>
+              </div>
+          </div>
+          <div class="form-group">
+            <div class="col-sm-12">
+                <button [disabled]="parecerForm.invalid" (click)="salvar()" class="btn btn-success">Salvar</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

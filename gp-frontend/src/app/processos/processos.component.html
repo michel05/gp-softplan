@@ -1,0 +1,72 @@
+
+<!-- ============================================================== -->
+<!-- Bread crumb and right sidebar toggle -->
+<!-- ============================================================== -->
+<div class="page-breadcrumb">
+<div class="row align-items-center">
+    <div class="col-5">
+        <h4 class="page-title">Processos</h4>
+        <div class="d-flex align-items-center">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a [routerLink]="['/home']">Home</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Processos</li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+</div>
+</div>
+<!-- ============================================================== -->
+<!-- End Bread crumb and right sidebar toggle -->
+<!-- ============================================================== -->
+<!-- ============================================================== -->
+<!-- Container fluid  -->
+<!-- ============================================================== -->
+<div class="container-fluid">
+<!-- ============================================================== -->
+<!-- Sales chart -->
+<!-- ============================================================== -->
+<div class="row">
+
+    <div class="col-12">
+
+        <div class="card">
+
+            <div class="card-body">
+                <h4 class="card-title">Processos</h4>
+            </div>
+            <div class="table-responsive">
+                <table class="table">
+                    <thead class="thead-light">
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Descricao</th>
+                        <th scope="col" style="width: 10%;">
+                          <a [routerLink]="['/processos/form']"  class="btn btn-block create-btn text-white no-block d-flex align-items-center"><i style="padding: 0 10px" class="fa fa-plus-square"></i>
+                            <span class="hide-menu m-l-5">Novo</span>
+                          </a>
+                        </th>
+      </tr>
+      </thead>
+        <tbody>
+            <tr *ngFor="let processo of getProcessos()">
+                <th scope="row">{{processo.cod}}</th>
+                <td>{{processo.descricao}}</td>
+                <a class="btn create-btn text-white  align-items-center"
+                      style="margin: 2px; height: 33px;" [routerLink]="['/processos', processo.cod]"><i class="fa fa-newspaper" ></i></a>
+            </tr>
+
+        </tbody>
+    </table>
+</div>
+</div>
+</div>
+
+    </div>
+</div>
+
+<!-- ============================================================== -->
+<!-- End Container fluid  -->
+<!-- ============================================================== -->
+<!-- ============================================================== -->
